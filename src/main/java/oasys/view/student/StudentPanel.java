@@ -1,8 +1,8 @@
-package oasys.student;
+package oasys.view.student;
 
-import oasys.student.panel.Account;
-import oasys.student.panel.Dashboard;
-import oasys.student.panel.Teacher;
+import oasys.view.student.panel.Account;
+import oasys.view.student.panel.Dashboard;
+import oasys.view.student.panel.Teacher;
 
 import javax.swing.*;
 import java.awt.*;

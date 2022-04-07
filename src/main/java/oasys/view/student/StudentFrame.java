@@ -1,4 +1,4 @@
-package oasys.student;
+package oasys.view.student;
 
 import javax.swing.*;
 

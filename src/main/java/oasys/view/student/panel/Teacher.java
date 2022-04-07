@@ -1,4 +1,4 @@
-package oasys.student.panel;
+package oasys.view.student.panel;
 
 import javax.swing.*;
 
