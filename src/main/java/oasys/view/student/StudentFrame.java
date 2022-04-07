@@ -10,6 +10,5 @@ public class StudentFrame extends  JFrame{
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
-
     }
 }

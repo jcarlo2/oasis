@@ -25,6 +25,7 @@ public class StudentPanel extends JPanel {
 
         accountBtn.setEnabled(false);
 
+
         setWest();
         setCenter();
         addActionListener();
