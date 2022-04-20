@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5efaeda1-73c3-47a2-ac36-5799727770af" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/TeacherFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/TeacherPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Classroom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Dashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/OASYSApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/OASYSApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/login/LogInFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/login/LogInFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/login/LogInPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/login/LogInPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/mailbox/MailBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/mailbox/MailBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/haha.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/haha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/oasys.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/oasys.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +30,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -47,28 +49,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/darkm_000/Desktop/Portfolio/oasis",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\darkm_000\Desktop\Portfolio\oasis\src\main\resources\images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="oasys.view.teacher" />
+      <recent name="oasys.view.teacher.panel" />
+      <recent name="oasys.view.student.teacher.panel" />
+      <recent name="oasys.view.student.teacher" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="OASYSApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="oasys.OASYSApplication" />
-      <module name="oasys" />
+      <module name="oasis" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="oasys.*" />
