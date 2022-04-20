@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5efaeda1-73c3-47a2-ac36-5799727770af" name="Changes" comment="gagawin ko na ung 2 pa">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/im_pomu.png" afterDir="false" />
+    <list default="true" id="5efaeda1-73c3-47a2-ac36-5799727770af" name="Changes" comment="Teachers Update">
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/OASYSApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/OASYSApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Classroom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Dashboard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -103,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650415522802</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Teachers Update">
+      <created>1650427187354</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650427187355</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,6 +123,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="gagawin ko na ung 2 pa" />
-    <option name="LAST_COMMIT_MESSAGE" value="gagawin ko na ung 2 pa" />
+    <MESSAGE value="Teachers Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Teachers Update" />
   </component>
 </project>
