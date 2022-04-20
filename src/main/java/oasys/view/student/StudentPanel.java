@@ -2,7 +2,7 @@ package oasys.view.student;
 
 import oasys.view.student.panel.Account;
 import oasys.view.student.panel.Dashboard;
-import oasys.view.student.panel.Teacher;
+import oasys.view.student.panel.teacher.TeacherCard;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,7 +10,7 @@ import java.awt.*;
 public class StudentPanel extends JPanel {
     private final Account account = new Account();
     private final Dashboard dashboard = new Dashboard();
-    private final Teacher teacher = new Teacher();
+    private final TeacherCard teacher = new TeacherCard();
     private final JPanel center = new JPanel();
     private final JPanel west = new JPanel();
     private final JButton accountBtn = new JButton("        Account        ");
@@ -24,7 +24,6 @@ public class StudentPanel extends JPanel {
         setLayout(new BorderLayout());
 
         accountBtn.setEnabled(false);
-
 
         setWest();
         setCenter();

@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5efaeda1-73c3-47a2-ac36-5799727770af" name="Changes" comment="dashboard done" />
+    <list default="true" id="5efaeda1-73c3-47a2-ac36-5799727770af" name="Changes" comment="dashboard done">
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTextField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/model/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/Concern.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/TeacherCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/model/CustomJTextArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTextArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/login/LogInPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/login/LogInPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Teacher.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/darkm_000/Desktop/Portfolio/oasis",
+    "last_opened_file_path": "C:/Users/darkm_000/Desktop/Portfolio/oasis/src/main/java/oasys/customcomponent",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -46,6 +62,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\darkm_000\Desktop\Portfolio\oasis\src\main\java\oasys\customcomponent" />
       <recent name="C:\Users\darkm_000\Desktop\Portfolio\oasis\src\main\resources\images" />
     </key>
   </component>
@@ -99,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649316979249</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="dashboard done">
+      <created>1650412387326</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650412387326</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

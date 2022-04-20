@@ -1,6 +1,6 @@
 package oasys.view.student.panel;
 
-import oasys.model.CustomJTextArea;
+import oasys.customcomponent.CustomJTextArea;
 
 import javax.swing.*;
 import java.awt.*;
