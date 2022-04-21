@@ -1,6 +1,7 @@
 package oasys.view.student.panel.teacher;
 
 import lombok.Getter;
+import oasys.customcomponent.CustomJTextArea;
 import oasys.customcomponent.CustomJTextField;
 
 import javax.swing.*;
@@ -13,7 +14,7 @@ public class Concern extends JPanel {
     private final JPanel wrapper2 = new JPanel();
     private final JButton back = new JButton("Back");
     private final JButton submit = new JButton("Submit");
-    private final JTextArea textArea = new JTextArea("CONCERN NI ABRIOL AY BAKIT ARAW ARAW SYANG GWAPO :(@@@@@@@@@@@@@@@@@@@@@@@@@");
+    private final CustomJTextArea textArea = new CustomJTextArea("CONCERN NI ABRIOL AY BAKIT ARAW-ARAW SYANG GWAPO :(");
     private final CustomJTextField teacherField = new CustomJTextField("Teacher");
     private final CustomJTextField studentField = new CustomJTextField("Student");
     private final CustomJTextField subjectField = new CustomJTextField("Subject");

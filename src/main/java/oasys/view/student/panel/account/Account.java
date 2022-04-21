@@ -1,5 +1,6 @@
-package oasys.view.student.panel;
+package oasys.view.student.panel.account;
 
+import lombok.Getter;
 import oasys.view.Constant;
 
 import javax.swing.*;
@@ -7,6 +8,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
+@Getter
 public class Account extends JPanel {
     private final JPanel informationPanel = new JPanel();
     private final JPanel bottomPanel = new JPanel();

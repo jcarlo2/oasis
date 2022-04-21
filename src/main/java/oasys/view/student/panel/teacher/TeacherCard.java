@@ -17,10 +17,10 @@ public class TeacherCard extends JPanel {
         add("concern",concern);
         card.show(this,"teacher");
 
-        addActionListener();
+        addListener();
     }
 
-    private void addActionListener() {
+    private void addListener() {
         teacher.getConcernBtn().addActionListener(e -> card.show(this,"concern"));
         concern.getBack().addActionListener(e -> card.show(this,"teacher"));
     }

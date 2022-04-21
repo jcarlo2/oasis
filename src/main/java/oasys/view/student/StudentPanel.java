@@ -1,15 +1,15 @@
 package oasys.view.student;
 
-import oasys.view.student.panel.Account;
-import oasys.view.student.panel.Dashboard;
+import oasys.view.student.panel.account.AccountCard;
+import oasys.view.student.panel.dashboard.DashboardCard;
 import oasys.view.student.panel.teacher.TeacherCard;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class StudentPanel extends JPanel {
-    private final Account account = new Account();
-    private final Dashboard dashboard = new Dashboard();
+    private final AccountCard account = new AccountCard();
+    private final DashboardCard dashboard = new DashboardCard();
     private final TeacherCard teacher = new TeacherCard();
     private final JPanel center = new JPanel();
     private final JPanel west = new JPanel();
