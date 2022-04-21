@@ -1,44 +1,30 @@
 package oasys.view.teacher.panel;
 
-import oasys.view.Constant;
-
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class Classroom extends JPanel {
-    private final JPanel navigationPanel = new JPanel();
-    private final JPanel customJList = new JPanel();
-
+    String[] students = {
+            "Finana Ryugu",
+            "Elira Pendora",
+            "Selen Tatsuki",
+            "Petra Gurin",
+            "Rosemi Lockheart",
+            "Nina Kosaka",
+            "Millie Parfait",
+            "Enna Alouette",
+            "Reimu Endou"
+    };
+    private final JList<String> student = new JList<>(students);
+    private final JScrollPane scroll = new JScrollPane(student);
 
 
     public Classroom() {
         setLayout(new GridLayout(1,1));
-
-        setNavigationPanel();
-        add(navigationPanel);
+        DefaultListCellRenderer renderer = new DefaultListCellRenderer();
+        renderer.setHorizontalAlignment(SwingConstants.CENTER);
+        student.setCellRenderer(renderer);
+        add(scroll);
     }
-        private void setNavigationPanel(){
-            navigationPanel.setBackground(Constant.COLOR_BLUE);
-            navigationPanel.setLayout(new BorderLayout());
-
-            String students[] = {
-                    "Finana Ryugu",
-                    "Elira Pendora",
-                    "Selen Tatsuki",
-                    "Petra Gurin",
-                    "Rosemi Lockheart",
-                    "Nina Kosaka",
-                    "Millie Parfait",
-                    "Enna Alouette",
-                    "Reimu Endou"
-            };
-
-            JList student = new JList(students);
-            customJList.add(student);
-            customJList.setBackground(Constant.COLOR_BLUE);
-        navigationPanel.add(customJList, BorderLayout.WEST);
-
-        }
-    }
+ }
 
