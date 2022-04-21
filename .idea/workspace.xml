@@ -4,10 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5efaeda1-73c3-47a2-ac36-5799727770af" name="Changes" comment="Teachers Update">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="5efaeda1-73c3-47a2-ac36-5799727770af" name="Changes" comment="dashboard done">
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/AccountCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/dashboard/AnnouncementBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/dashboard/Dashboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/dashboard/DashboardCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Classroom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTextArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTextArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/mailbox/MailBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/MailBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/Dashboard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/Concern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/Concern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/TeacherCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/TeacherCard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,14 +33,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -43,30 +44,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/darkm_000/Desktop/Portfolio/oasis/src/main/java/oasys/customcomponent&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\darkm_000\Desktop\Portfolio\oasis\src\main\java\oasys\customcomponent" />
       <recent name="C:\Users\darkm_000\Desktop\Portfolio\oasis\src\main\resources\images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\fajar\IdeaProjects\oasis\src\main\resources\images" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="oasys.view.teacher" />
-      <recent name="oasys.view.teacher.panel" />
-      <recent name="oasys.view.student.teacher.panel" />
-      <recent name="oasys.view.student.teacher" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="OASYSApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="oasys.OASYSApplication" />
-      <module name="oasis" />
+      <module name="oasys" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="oasys.*" />
@@ -92,21 +92,42 @@
       <option name="presentableId" value="Default" />
       <updated>1649032183248</updated>
     </task>
-    <task id="LOCAL-00001" summary="gagawin ko na ung 2 pa">
-      <created>1650415522802</created>
+    <task id="LOCAL-00001" summary="INITIAL">
+      <created>1649308087973</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1650415522802</updated>
+      <updated>1649308087973</updated>
     </task>
-    <task id="LOCAL-00002" summary="Teachers Update">
-      <created>1650427187354</created>
+    <task id="LOCAL-00002" summary="INITIAL">
+      <created>1649308101396</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1650427187355</updated>
+      <updated>1649308101396</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="dashboard done">
+      <created>1649316979249</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649316979249</updated>
+    </task>
+    <task id="LOCAL-00004" summary="dashboard done">
+      <created>1650412387326</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650412387326</updated>
+    </task>
+    <task id="LOCAL-00005" summary="dashboard done">
+      <created>1650498177636</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1650498177636</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,8 +143,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="gagawin ko na ung 2 pa" />
-    <MESSAGE value="Teachers Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Teachers Update" />
+    <MESSAGE value="INITIAL" />
+    <MESSAGE value="dashboard done" />
+    <option name="LAST_COMMIT_MESSAGE" value="dashboard done" />
   </component>
 </project>

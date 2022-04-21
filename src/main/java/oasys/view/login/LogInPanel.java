@@ -48,7 +48,6 @@ public class LogInPanel extends JPanel {
         inputPanel.setBackground(Constant.COLOR_BLUE);
         inputPanel.setLayout(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
-        constraints.anchor = GridBagConstraints.CENTER;
         constraints.insets = new Insets(2,2,2,2);
 
         constraints.gridx = 0;
