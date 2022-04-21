@@ -1,8 +1,11 @@
 package oasys.view.teacher.panel;
 
+import lombok.Getter;
+
 import javax.swing.*;
 import java.awt.*;
 
+@Getter
 public class Classroom extends JPanel {
     String[] students = {
             "Finana Ryugu",
