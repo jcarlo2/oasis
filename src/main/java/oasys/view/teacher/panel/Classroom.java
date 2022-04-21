@@ -18,7 +18,6 @@ public class Classroom extends JPanel {
     private final JList<String> student = new JList<>(students);
     private final JScrollPane scroll = new JScrollPane(student);
 
-
     public Classroom() {
         setLayout(new GridLayout(1,1));
         DefaultListCellRenderer renderer = new DefaultListCellRenderer();
