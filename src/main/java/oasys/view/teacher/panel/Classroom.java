@@ -28,5 +28,5 @@ public class Classroom extends JPanel {
         student.setCellRenderer(renderer);
         add(scroll);
     }
- }
+}
 

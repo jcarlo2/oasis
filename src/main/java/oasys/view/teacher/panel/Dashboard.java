@@ -3,7 +3,6 @@ package oasys.view.teacher.panel;
 import oasys.view.Constant;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
@@ -14,7 +13,6 @@ public class Dashboard extends JPanel {
     private final JTable table = new JTable(model);
     private final JButton post = new JButton("Post");
     private final JButton delete = new JButton("Delete");
-
 
     public Dashboard() {
         setLayout(new GridLayout(1,1));
@@ -43,10 +41,8 @@ public class Dashboard extends JPanel {
         commandPanel.add(post,BorderLayout.WEST);
         commandPanel.add(delete,BorderLayout.EAST);
 
-
         announcementPanel.add(table,BorderLayout.CENTER);
         announcementPanel.add(commandPanel,BorderLayout.SOUTH);
-
     }
 
 }

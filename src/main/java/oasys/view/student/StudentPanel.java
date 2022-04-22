@@ -19,8 +19,8 @@ public class StudentPanel extends JPanel {
     private final CardLayout card = new CardLayout();
 
     public StudentPanel() {
-        setMinimumSize(new Dimension(600,400));
-        setPreferredSize(new Dimension(600,400));
+        setMinimumSize(new Dimension(800,600));
+        setPreferredSize(new Dimension(800,600));
         setLayout(new BorderLayout());
 
         accountBtn.setEnabled(false);

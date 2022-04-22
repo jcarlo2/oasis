@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5efaeda1-73c3-47a2-ac36-5799727770af" name="Changes" comment="refactor some classes">
+    <list default="true" id="5efaeda1-73c3-47a2-ac36-5799727770af" name="Changes" comment="refactor teacher.Classroom">
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/admin/AdminFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/admin/AdminPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/admin/account/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/admin/classroom/Classroom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/admin/student/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/view/admin/teacher/Teacher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasys/OASYSApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/OASYSApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTextArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTextArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/MailBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/MailBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/Concern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/Concern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/TeacherPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/TeacherPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Classroom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Dashboard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +55,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/darkm_000/Desktop/Portfolio/oasis/src/main/java/oasys/customcomponent&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/darkm_000/Desktop/Portfolio/java/oasis/src/main/java/oasys/view/admin&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
@@ -50,14 +63,18 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\darkm_000\Desktop\Portfolio\java\oasis\src\main\java\oasys\view\admin" />
       <recent name="C:\Users\darkm_000\Desktop\Portfolio\oasis\src\main\java\oasys\customcomponent" />
       <recent name="C:\Users\darkm_000\Desktop\Portfolio\oasis\src\main\resources\images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="oasys.view.admin.account" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="OASYSApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="oasys.OASYSApplication" />
-      <module name="oasys" />
+      <module name="oasis" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="oasys.*" />
@@ -132,7 +149,28 @@
       <option name="project" value="LOCAL" />
       <updated>1650501769817</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refactor teacher.Classroom">
+      <created>1650502583323</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1650502583323</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor teacher.Classroom">
+      <created>1650502657188</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1650502657188</updated>
+    </task>
+    <task id="LOCAL-00010" summary="refactor teacher.Classroom">
+      <created>1650502668867</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1650502668867</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,6 +189,7 @@
     <MESSAGE value="INITIAL" />
     <MESSAGE value="dashboard done" />
     <MESSAGE value="refactor some classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor some classes" />
+    <MESSAGE value="refactor teacher.Classroom" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor teacher.Classroom" />
   </component>
 </project>
