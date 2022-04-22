@@ -30,6 +30,7 @@ public class Teacher extends JPanel {
         wrapper.add(add,BorderLayout.WEST);
         add(scroll,BorderLayout.CENTER);
         add(wrapper,BorderLayout.SOUTH);
+
         setOptionPane();
     }
 
