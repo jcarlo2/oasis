@@ -1,5 +1,6 @@
 package oasys.view.admin;
 
+import lombok.Getter;
 import oasys.view.admin.account.Account;
 import oasys.view.admin.classroom.Classroom;
 import oasys.view.admin.student.Student;
@@ -8,6 +9,7 @@ import oasys.view.admin.teacher.Teacher;
 import javax.swing.*;
 import java.awt.*;
 
+@Getter
 public class AdminPanel extends JPanel {
     private final Account account = new Account();
     private final Teacher teacher = new Teacher();

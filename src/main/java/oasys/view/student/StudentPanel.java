@@ -1,5 +1,6 @@
 package oasys.view.student;
 
+import lombok.Getter;
 import oasys.view.student.panel.account.AccountCard;
 import oasys.view.student.panel.dashboard.DashboardCard;
 import oasys.view.student.panel.teacher.TeacherCard;
@@ -7,6 +8,7 @@ import oasys.view.student.panel.teacher.TeacherCard;
 import javax.swing.*;
 import java.awt.*;
 
+@Getter
 public class StudentPanel extends JPanel {
     private final AccountCard account = new AccountCard();
     private final DashboardCard dashboard = new DashboardCard();

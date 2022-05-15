@@ -1,8 +1,8 @@
 package oasys;
 
 import com.formdev.flatlaf.FlatIntelliJLaf;
-import oasys.view.admin.AdminFrame;
-import oasys.view.student.StudentFrame;
+import oasys.controller.MainController;
+import oasys.view.BuildGUI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +13,7 @@ public class OASYSApplication {
         EventQueue.invokeLater(() -> {
             try {
                 UIManager.setLookAndFeel(new FlatIntelliJLaf());
-                    new AdminFrame();
+                new MainController(new BuildGUI());
             }catch (Exception e) {
                 e.printStackTrace();
             }

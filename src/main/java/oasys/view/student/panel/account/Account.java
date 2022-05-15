@@ -1,7 +1,7 @@
 package oasys.view.student.panel.account;
 
 import lombok.Getter;
-import oasys.view.Constant;
+import oasys.util.Constant;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;

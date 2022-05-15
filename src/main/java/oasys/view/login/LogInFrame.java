@@ -1,12 +1,18 @@
 package oasys.view.login;
 
 
+import lombok.Getter;
+import oasys.util.TableCreator;
+
 import javax.swing.*;
 
-public class LogInFrame extends JFrame  {
+@Getter
+public class LogInFrame extends JFrame implements TableCreator {
+    private final LogInPanel logInPanel = new LogInPanel();
     public LogInFrame() {
-
-        add(new LogInPanel());
+        createStudentTable();
+        createUserTable();
+        add(logInPanel);
         pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
