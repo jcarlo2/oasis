@@ -40,6 +40,5 @@ public class LogInController {
         if(role.equals("student")) buildGUI.getStudentFrame().setVisible(true);
         if(role.equals("teacher")) buildGUI.getTeacherFrame().setVisible(true);
         if(role.equals("admin")) buildGUI.getAdminFrame().setVisible(true);
-
     }
 }
