@@ -26,9 +26,8 @@ public class LogInController extends AbstractAction{
         logInPanel = buildGUI.getLogInFrame().getLogInPanel();
         this.buildGUI = buildGUI;
         this.mainModel = mainModel;
-
         setLogInBtn();
-        keyListener();
+        keyBinding();
     }
 
     @Override
@@ -37,19 +36,17 @@ public class LogInController extends AbstractAction{
     }
 
     private void setLogInBtn() {
-        logInPanel.getLogBtn().addActionListener(e -> {
-            logInEvent();
-        });
+        logInPanel.getLogBtn().addActionListener(e -> logInEvent());
     }
 
-    private void keyListener() {
+    private void keyBinding() {
         int input = JComponent.WHEN_IN_FOCUSED_WINDOW;
         logInPanel.getLogBtn().getInputMap(input).put(KeyStroke.getKeyStroke("ENTER"), "Enter");
         logInPanel.getLogBtn().getActionMap().put("Enter", this);
     }
 
     private void logInEvent() {
-        if(checkUsernameAndPassword())  createFrame(userDatabase.getRole(logInPanel.getUsername().getText()));
+        if(checkUsernameAndPassword()) createFrame(userDatabase.getRole(logInPanel.getUsername().getText()));
         else Dialog.LOG_IN_FAILED();
     }
 
@@ -88,6 +85,7 @@ public class LogInController extends AbstractAction{
         if(role.equals("student")) {
             buildGUI.getStudentFrame().setVisible(true);
             setStudentInformation();
+
         }
         if(role.equals("teacher")) {
             buildGUI.getTeacherFrame().setVisible(true);

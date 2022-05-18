@@ -5,49 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5efaeda1-73c3-47a2-ac36-5799727770af" name="Changes" comment="LogInController done">
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/controller/database/AnnouncementDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/controller/database/ConcernReportDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/controller/database/TeacherDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/controller/user/student/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/controller/user/teacher/TeacherController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/MyEditorKit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/StudentJTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/TeacherJTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/model/MainModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/model/dto/ConcernReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/util/TableCreatorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/previous.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/JPanelBlueBackground.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/mail.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/OASYSApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/OASYSApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/controller/database/StudentDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/controller/database/StudentDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasys/controller/login/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/controller/login/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTextArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTextPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTextField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/controller/user/student/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/controller/user/student/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/controller/user/teacher/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/controller/user/teacher/TeacherController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasys/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/model/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/util/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/util/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/util/Dialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/util/Dialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasys/util/TableCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/util/TableCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/admin/AdminFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/admin/AdminFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/admin/classroom/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/admin/classroom/Classroom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/login/LogInFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/login/LogInFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/login/LogInPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/login/LogInPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/StudentPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/util/TableCreatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/util/TableCreatorImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/AccountCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/AccountCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/MailBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/MailBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/dashboard/AnnouncementBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/dashboard/AnnouncementBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/dashboard/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/dashboard/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/Concern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/Concern.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/TeacherCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/TeacherCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/TeacherFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/TeacherFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/Dashboard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +63,9 @@
       <recent name="C:\Users\darkm_000\Desktop\Portfolio\java\oasis\src\main\java\oasys\view\admin" />
       <recent name="C:\Users\darkm_000\Desktop\Portfolio\oasis\src\main\java\oasys\customcomponent" />
       <recent name="C:\Users\darkm_000\Desktop\Portfolio\oasis\src\main\resources\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\darkm_000\Desktop\Portfolio\java\oasis\src\main\resources\images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="oasys.view.admin.account" />
@@ -234,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652589234084</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="LogInController done">
+      <created>1652860436933</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652860436934</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

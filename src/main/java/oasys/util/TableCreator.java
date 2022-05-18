@@ -7,6 +7,17 @@ import java.sql.PreparedStatement;
 import static oasys.util.Constant.*;
 
 public interface TableCreator {
+    default void createSchema() {
+        try {
+            String query = "CREATE SCHEMA IF NOT EXISTS student_management";
+            Connection connection = DriverManager.getConnection(URL,USER,PASS);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.executeUpdate();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     default void createStudentTable() {
         try {
             String query = "CREATE TABLE IF NOT EXISTS student(id VARCHAR(255) PRIMARY KEY, name VARCHAR(255)," +

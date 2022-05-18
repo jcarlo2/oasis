@@ -19,4 +19,14 @@ public class Teacher {
     private ArrayList<String> advisoryClass;
 
     public Teacher() {}
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null) return false;
+        if(!(obj instanceof Teacher teacher)) return false;
+        return getId().equals(teacher.getId()) && getName().equals(teacher.getName()) &&
+                getEmail().equals(teacher.getEmail()) && getCampus().equals(teacher.getCampus()) &&
+                getDepartment().equals(teacher.getDepartment()) && getConsultationHours().equals(teacher.getConsultationHours()) &&
+                getYear().equals(teacher.getYear()) && getAdvisoryClass().equals(teacher.getAdvisoryClass());
+    }
 }

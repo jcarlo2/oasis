@@ -13,9 +13,10 @@ import java.util.concurrent.TimeUnit;
 
 public class TeacherController {
     private final TeacherDatabase database = new TeacherDatabase();
-    private final Teacher teacher;
     private final TeacherPanel teacherPanel;
     private final TeacherJTable table;
+    private Teacher teacher;
+
 
     public TeacherController(@NotNull BuildGUI buildGUI, @NotNull Teacher teacher) {
         this.teacher = teacher;
@@ -28,11 +29,23 @@ public class TeacherController {
     private void updateData() {
         Runnable runnable = () -> {
             if(teacher.getId() != null) {
-                table.addTeacherInformation(database.getTeacherInformation(teacher.getId()));
+                addTeacherInformationToTable();
             }
         };
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
         executor.scheduleAtFixedRate(runnable, 0, 1, TimeUnit.SECONDS);
+    }
+
+    private void addTeacherInformationToTable() {
+        if(table.getRowCount() == 0) table.addTeacherInformation(teacher);
+        if(!isSameData(teacher)) {
+            teacher = database.getTeacherInformation(teacher.getId());
+            table.addTeacherInformation(teacher);
+        }
+    }
+
+    private boolean isSameData(@NotNull Teacher teacher) {
+        return teacher.equals(database.getTeacherInformation(teacher.getId()));
     }
 
     private void setLogOut(BuildGUI buildGUI) {

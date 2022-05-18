@@ -2,6 +2,7 @@ package oasys.controller.user.student;
 
 import oasys.controller.database.AnnouncementDatabase;
 import oasys.controller.database.ConcernReportDatabase;
+import oasys.controller.database.StudentDatabase;
 import oasys.model.Student;
 import oasys.model.dto.ConcernReport;
 import oasys.util.Dialog;
@@ -24,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 public class StudentController {
     private final AnnouncementDatabase announcementDatabase = new AnnouncementDatabase();
     private final ConcernReportDatabase concernReportDatabase = new ConcernReportDatabase();
-    private final Student student;
+    private final StudentDatabase studentDatabase = new StudentDatabase();
     private final DashboardCard dashboardCard;
     private final StudentPanel studentPanel;
     private final Account account;
@@ -33,6 +34,7 @@ public class StudentController {
     private final TeacherCard teacherCard;
     private final Concern concern;
     private final BuildGUI buildGUI;
+    private Student student;
     private int boardNum = 0;
 
     public StudentController(@NotNull BuildGUI buildGUI, Student student) {
@@ -87,8 +89,8 @@ public class StudentController {
     private void updateData() {
         Runnable runnable = () -> {
             if(student.getId() != null) {
+                addStudentInformationToTable();
                 getTitle();
-                account.getTable().addStudentInformation(student);
                 getAdviser();
                 concernAutoFillUp();
                 getConcernReportToMailBox();
@@ -96,6 +98,18 @@ public class StudentController {
         };
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
         executor.scheduleAtFixedRate(runnable, 0, 1, TimeUnit.SECONDS);
+    }
+
+    private void addStudentInformationToTable() {
+        if(account.getTable().getRowCount() == 0) account.getTable().addStudentInformation(student);
+        if(!isSameData(student)) {
+            student = studentDatabase.getStudentInformation(student.getId());
+            account.getTable().addStudentInformation(student);
+        }
+    }
+
+    private boolean isSameData(@NotNull Student student) {
+        return student.equals(studentDatabase.getStudentInformation(student.getId()));
     }
 
     private void concernAutoFillUp() {
