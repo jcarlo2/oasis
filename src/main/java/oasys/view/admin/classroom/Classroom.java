@@ -14,9 +14,9 @@ public class Classroom extends JPanel {
     private final JScrollPane scroll = new JScrollPane(table);
     private final JPanel wrapper = new JPanel();
     private final JPanel wrapper1 = new JPanel();
-    private final CustomJTextField adviserName = new CustomJTextField("Adviser");
-    private final CustomJTextField section = new CustomJTextField("Section");
-    private final CustomJTextField student = new CustomJTextField("Student");
+    private final CustomJTextField adviserName = new CustomJTextField("Adviser",true);
+    private final CustomJTextField section = new CustomJTextField("Section",true);
+    private final CustomJTextField student = new CustomJTextField("Student",true);
     private final JButton add = new JButton("Add");
     private final JButton remove = new JButton("Remove");
 

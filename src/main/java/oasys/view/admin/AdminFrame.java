@@ -8,7 +8,7 @@ import javax.swing.*;
 public class AdminFrame extends  JFrame{
     private final AdminPanel adminPanel = new AdminPanel();
     public AdminFrame() {
-        super("OASYS");
+        super("OASYS - Admin");
         add(adminPanel);
         pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

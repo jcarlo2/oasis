@@ -2,6 +2,8 @@ package oasys;
 
 import com.formdev.flatlaf.FlatIntelliJLaf;
 import oasys.controller.MainController;
+import oasys.model.MainModel;
+import oasys.util.TableCreatorImpl;
 import oasys.view.BuildGUI;
 
 import javax.swing.*;
@@ -13,7 +15,8 @@ public class OASYSApplication {
         EventQueue.invokeLater(() -> {
             try {
                 UIManager.setLookAndFeel(new FlatIntelliJLaf());
-                new MainController(new BuildGUI());
+                new TableCreatorImpl();
+                new MainController(new BuildGUI(),new MainModel());
             }catch (Exception e) {
                 e.printStackTrace();
             }

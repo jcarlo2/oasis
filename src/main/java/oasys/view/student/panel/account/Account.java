@@ -1,6 +1,7 @@
 package oasys.view.student.panel.account;
 
 import lombok.Getter;
+import oasys.customcomponent.StudentJTable;
 import oasys.util.Constant;
 
 import javax.swing.*;
@@ -14,8 +15,7 @@ public class Account extends JPanel {
     private final JPanel bottomPanel = new JPanel();
     private final JPanel picturePanel = new JPanel();
     private final JLabel picture = new JLabel();
-    private final DefaultTableModel model = new DefaultTableModel(0,2);
-    private final JTable table = new JTable(model);
+    private final StudentJTable table = new StudentJTable();
     private final JButton mailBox = new JButton("Mail Box");
     private final JButton logOut = new JButton("Log Out");
 
@@ -32,26 +32,6 @@ public class Account extends JPanel {
     private void setInformationPanel() {
         informationPanel.setBackground(Constant.COLOR_BLUE);
         informationPanel.setLayout(new BorderLayout());
-
-        model.addRow(new String[]{"Name","Abriol, Joshua GWAPO"});
-        model.addRow(new String[]{"Email","akosiabriolgwapo@gmail.com"});
-        model.addRow(new String[]{"Campus","STI College Fairview"});
-        model.addRow(new String[]{"Academic Level","Secondary"});
-        model.addRow(new String[]{"Section","ICT-103"});
-        model.addRow(new String[]{"Program","Information and Communications Technology"});
-        model.addRow(new String[]{"Year Level","Grade 11"});
-        model.addRow(new String[]{"Student ID","1234567890"});
-        table.setBackground(Constant.COLOR_BLUE);
-
-        DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
-        renderer.setHorizontalAlignment(JLabel.CENTER);
-        table.setDefaultRenderer(Object.class,renderer); // CENTER TEXT
-        table.setShowVerticalLines(true);
-        table.setShowHorizontalLines(true);
-
-        table.getTableHeader().setReorderingAllowed(false);
-        table.getTableHeader().setResizingAllowed(false);
-        table.setDefaultEditor(Object.class,null); // DISABLE EDIT setEditable(false)
 
         bottomPanel.setLayout(new BorderLayout());
         bottomPanel.setBackground(Constant.COLOR_BLUE);

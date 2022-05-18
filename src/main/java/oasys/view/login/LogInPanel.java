@@ -12,8 +12,8 @@ public class LogInPanel extends JPanel {
     private final JPanel inputPanel = new JPanel();
 
     private final JLabel logo = new JLabel();
-    private final JTextField username = new JTextField("Username",15);
-    private final JPasswordField password = new JPasswordField("Password",15);
+    private final JTextField username = new JTextField("654321",15);
+    private final JPasswordField password = new JPasswordField("654321",15);
     private final JButton logBtn = new JButton("Log In");
 
     public LogInPanel() {

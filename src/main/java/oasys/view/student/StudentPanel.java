@@ -29,39 +29,9 @@ public class StudentPanel extends JPanel {
 
         setWest();
         setCenter();
-        addActionListener();
 
         add(west,BorderLayout.WEST);
         add(center, BorderLayout.CENTER);
-    }
-
-    private void addActionListener() {
-        accountBtn.addActionListener(e -> {
-            if(e.getSource() == accountBtn) {
-                card.show(center,"account");
-                accountBtn.setEnabled(false);
-                dashboardBtn.setEnabled(true);
-                teacherBtn.setEnabled(true);
-            }
-        });
-
-        dashboardBtn.addActionListener(e -> {
-            if(e.getSource() == dashboardBtn) {
-                card.show(center,"dashboard");
-                accountBtn.setEnabled(true);
-                dashboardBtn.setEnabled(false);
-                teacherBtn.setEnabled(true);
-            }
-        });
-
-        teacherBtn.addActionListener(e -> {
-            if(e.getSource() == teacherBtn) {
-                card.show(center,"teacher");
-                accountBtn.setEnabled(true);
-                dashboardBtn.setEnabled(true);
-                teacherBtn.setEnabled(false);
-            }
-        });
     }
 
     private void setCenter() {

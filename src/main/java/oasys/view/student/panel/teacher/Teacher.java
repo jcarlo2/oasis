@@ -12,7 +12,7 @@ public class Teacher extends JPanel {
     private final JPanel wrapper1 = new JPanel();
     private final JPanel wrapper2 = new JPanel();
     private final JLabel label = new JLabel();
-    private final CustomJTextField teacherName = new CustomJTextField("Teacher");
+    private final CustomJTextField teacherName = new CustomJTextField("Teacher",false, Color.YELLOW);
     private final JButton concernBtn = new JButton("Raise A Concern");
     public Teacher() {
         setLayout(new GridLayout(2,1));
@@ -31,7 +31,6 @@ public class Teacher extends JPanel {
 
     private void setWrapper2() {
         teacherName.setText("Ariana Grande");
-        teacherName.setEditable(false);
         concernBtn.setBackground(Color.GREEN);
         teacherName.setBackground(Color.YELLOW);
         wrapper2.setLayout(new GridBagLayout());

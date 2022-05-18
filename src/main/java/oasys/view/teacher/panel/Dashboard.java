@@ -1,11 +1,13 @@
 package oasys.view.teacher.panel;
 
+import lombok.Getter;
 import oasys.util.Constant;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
+@Getter
 public class Dashboard extends JPanel {
     private final JPanel announcementPanel = new JPanel();
     private final JPanel commandPanel = new JPanel();

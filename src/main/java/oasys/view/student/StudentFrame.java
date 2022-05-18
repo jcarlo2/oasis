@@ -8,11 +8,11 @@ import javax.swing.*;
 public class StudentFrame extends  JFrame{
     private final StudentPanel studentPanel = new StudentPanel();
     public StudentFrame() {
-        super("OASYS");
+        super("OASYS - Student");
         add(studentPanel);
         pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setResizable(false);
+        setResizable(true);
         setLocationRelativeTo(null);
     }
 }

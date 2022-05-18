@@ -1,8 +1,11 @@
 package oasys.view.student.panel.account;
 
+import lombok.Getter;
+
 import javax.swing.*;
 import java.awt.*;
 
+@Getter
 public class AccountCard extends JPanel {
     private final CardLayout card = new CardLayout();
     private final Account account = new Account();

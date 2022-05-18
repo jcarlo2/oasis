@@ -10,8 +10,7 @@ import javax.swing.*;
 public class LogInFrame extends JFrame implements TableCreator {
     private final LogInPanel logInPanel = new LogInPanel();
     public LogInFrame() {
-        createStudentTable();
-        createUserTable();
+
         add(logInPanel);
         pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

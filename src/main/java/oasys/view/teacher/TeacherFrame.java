@@ -8,6 +8,7 @@ import javax.swing.*;
 public class TeacherFrame extends  JFrame{
     private final TeacherPanel teacherPanel = new TeacherPanel();
     public TeacherFrame() {
+        super("OASYS - Teacher");
         add(teacherPanel);
         pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

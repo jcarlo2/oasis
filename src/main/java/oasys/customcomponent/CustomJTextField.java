@@ -6,8 +6,17 @@ import javax.swing.border.TitledBorder;
 import java.awt.*;
 
 public class CustomJTextField extends JTextField {
-    public CustomJTextField(String title) {
+    public CustomJTextField(String title, boolean isEditable) {
         setColumns(15);
+        setEditable(isEditable);
+        setTitledBorder(title);
+        setHorizontalAlignment(SwingConstants.CENTER);
+    }
+
+    public CustomJTextField(String title, boolean isEditable, Color color) {
+        setColumns(15);
+        setBackground(color);
+        setEditable(isEditable);
         setTitledBorder(title);
         setHorizontalAlignment(SwingConstants.CENTER);
     }
