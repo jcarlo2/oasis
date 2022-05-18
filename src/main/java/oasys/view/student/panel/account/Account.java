@@ -3,11 +3,12 @@ package oasys.view.student.panel.account;
 import lombok.Getter;
 import oasys.customcomponent.CustomJButton;
 import oasys.customcomponent.JPanelBlueBackground;
-import oasys.customcomponent.StudentJTable;
-import oasys.util.Constant;
+import oasys.customcomponent.jtable.StudentJTable;
 
 import javax.swing.*;
 import java.awt.*;
+
+import static oasys.util.ConstantString.*;
 
 @Getter
 public class Account extends JPanel {
@@ -19,9 +20,8 @@ public class Account extends JPanel {
     private final JPanelBlueBackground picturePanel = new JPanelBlueBackground();
     private final JLabel picture = new JLabel();
     private final StudentJTable table = new StudentJTable();
-    private final CustomJButton mailBox = new CustomJButton("src/main/resources/images/mail.png",70,50);
-    private final JButton logOut = new JButton("Log Out");
-
+    private final CustomJButton mailBox = new CustomJButton(MAIL_RED,MAIL_GREEN,100,70);
+    private final CustomJButton logOut = new CustomJButton(LOGOUT_BLUE,LOGOUT_RED,100,50);
 
     public Account() {
         setLayout(new GridLayout(2,1));

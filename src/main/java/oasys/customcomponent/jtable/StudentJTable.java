@@ -1,8 +1,8 @@
-package oasys.customcomponent;
+package oasys.customcomponent.jtable;
 
 import lombok.Getter;
 import oasys.model.Student;
-import oasys.util.Constant;
+import oasys.util.ConstantString;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
@@ -24,7 +24,7 @@ public class StudentJTable extends JTable {
         getTableHeader().setReorderingAllowed(false);
         getTableHeader().setResizingAllowed(false);
         setDefaultEditor(Object.class,null); // DISABLE EDIT setEditable(false)
-        setBackground(Constant.COLOR_BLUE);
+        setBackground(ConstantString.COLOR_BLUE);
     }
 
     public void addStudentInformation(@NotNull Student student) {

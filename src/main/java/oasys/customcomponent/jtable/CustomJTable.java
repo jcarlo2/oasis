@@ -1,4 +1,4 @@
-package oasys.customcomponent;
+package oasys.customcomponent.jtable;
 
 import lombok.Getter;
 import oasys.model.dto.ConcernReport;

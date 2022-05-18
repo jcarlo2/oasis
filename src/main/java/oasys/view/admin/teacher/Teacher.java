@@ -1,7 +1,7 @@
 package oasys.view.admin.teacher;
 
 import lombok.Getter;
-import oasys.customcomponent.CustomJTable;
+import oasys.customcomponent.jtable.CustomJTable;
 
 import javax.swing.*;
 import java.awt.*;

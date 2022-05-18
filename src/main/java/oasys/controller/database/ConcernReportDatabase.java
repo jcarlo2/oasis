@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import static oasys.util.Constant.*;
+import static oasys.util.ConstantString.*;
 
 public class ConcernReportDatabase {
     public boolean isIdExist(String id) {
@@ -44,7 +44,7 @@ public class ConcernReportDatabase {
     }
     public ArrayList<ConcernReport> getConcernReport(String studentName) {
         ArrayList<ConcernReport> reportList = new ArrayList<>();
-        String[] data = new String[7];
+        String[] data = new String[8];
         try {
             String query = "SELECT * FROM concern_report WHERE student_name = ? ORDER BY date DESC";
             Connection connection = DriverManager.getConnection(URL,USER,PASS);
@@ -59,8 +59,9 @@ public class ConcernReportDatabase {
                 data[4] = resultSet.getString("detail");
                 data[5] = resultSet.getString("report_id");
                 data[6] = resultSet.getString("status");
+                data[7] = resultSet.getString("type");
                 reportList.add(new ConcernReport(data[0],data[1],data[2],
-                        data[3],data[4],data[5],data[6] ));
+                        data[3],data[4],data[5],data[6],data[7]));
             }
         }catch (Exception e) {
             e.printStackTrace();

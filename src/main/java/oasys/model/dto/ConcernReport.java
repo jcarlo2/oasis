@@ -13,4 +13,5 @@ public class ConcernReport {
     private String detail;
     private String reportId;
     private String status;
+    private String type;
 }

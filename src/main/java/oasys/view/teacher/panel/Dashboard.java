@@ -1,7 +1,7 @@
 package oasys.view.teacher.panel;
 
 import lombok.Getter;
-import oasys.util.Constant;
+import oasys.util.ConstantString;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -23,13 +23,13 @@ public class Dashboard extends JPanel {
     }
 
     private void setAnnouncementPanel() {
-        announcementPanel.setBackground(Constant.COLOR_BLUE);
+        announcementPanel.setBackground(ConstantString.COLOR_BLUE);
         announcementPanel.setLayout(new BorderLayout());
 
         model.addRow(new String[]{"Announcement/s:"});
         model.addRow(new String[]{"No Announcements."});
 
-        table.setBackground(Constant.COLOR_WHITE);
+        table.setBackground(ConstantString.COLOR_WHITE);
 
         table.setShowVerticalLines(false);
         table.setShowHorizontalLines(false);
@@ -39,7 +39,7 @@ public class Dashboard extends JPanel {
         table.setDefaultEditor(Object.class,null); // DISABLE EDIT setEditable(false)
 
         commandPanel.setLayout(new BorderLayout());
-        commandPanel.setBackground(Constant.COLOR_BLUE);
+        commandPanel.setBackground(ConstantString.COLOR_BLUE);
         commandPanel.add(post,BorderLayout.WEST);
         commandPanel.add(delete,BorderLayout.EAST);
 

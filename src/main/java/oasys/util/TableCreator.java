@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-import static oasys.util.Constant.*;
+import static oasys.util.ConstantString.*;
 
 public interface TableCreator {
     default void createSchema() {
@@ -61,7 +61,8 @@ public interface TableCreator {
         try {
             String query = "CREATE TABLE IF NOT EXISTS concern_report(no INT PRIMARY KEY NOT NULL AUTO_INCREMENT," +
              "student_name VARCHAR(255), student_id VARCHAR(255), adviser VARCHAR(255),subject VARCHAR(255)," +
-              "detail VARCHAR(255), report_id VARCHAR(255),status VARCHAR(255) DEFAULT 'pending',date DATETIME DEFAULT CURRENT_TIMESTAMP)";
+              "detail VARCHAR(255), report_id VARCHAR(255),status VARCHAR(255) DEFAULT 'pending'," +
+               "type VARCHAR(255), date DATETIME DEFAULT CURRENT_TIMESTAMP)";
             Connection connection = DriverManager.getConnection(URL,USER,PASS);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.executeUpdate();

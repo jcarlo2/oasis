@@ -11,7 +11,8 @@ import java.awt.*;
 
 public class OASYSApplication {
 
-    public static void main(String[]args) {
+    public static void main(String[]args){
+
         EventQueue.invokeLater(() -> {
             try {
                 UIManager.setLookAndFeel(new FlatIntelliJLaf());

@@ -1,8 +1,8 @@
 package oasys.view.teacher.panel;
 
 import lombok.Getter;
-import oasys.customcomponent.TeacherJTable;
-import oasys.util.Constant;
+import oasys.customcomponent.jtable.TeacherJTable;
+import oasys.util.ConstantString;
 
 import javax.swing.*;
 import java.awt.*;
@@ -27,11 +27,11 @@ public class Account extends JPanel {
     }
 
     private void setInformationPanel() {
-        informationPanel.setBackground(Constant.COLOR_BLUE);
+        informationPanel.setBackground(ConstantString.COLOR_BLUE);
         informationPanel.setLayout(new BorderLayout());
 
         logoutPanel.setLayout(new BorderLayout());
-        logoutPanel.setBackground(Constant.COLOR_BLUE);
+        logoutPanel.setBackground(ConstantString.COLOR_BLUE);
         logoutPanel.add(logout,BorderLayout.EAST);
 
         informationPanel.add(table,BorderLayout.CENTER);
@@ -44,7 +44,7 @@ public class Account extends JPanel {
         icon = new ImageIcon(img);
         picture.setIcon(icon);
 
-        picturePanel.setBackground(Constant.COLOR_BLUE);
+        picturePanel.setBackground(ConstantString.COLOR_BLUE);
         picturePanel.setLayout(new GridBagLayout());
         picturePanel.add(picture);
     }

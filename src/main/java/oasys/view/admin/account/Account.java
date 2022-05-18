@@ -1,7 +1,7 @@
 package oasys.view.admin.account;
 
 import lombok.Getter;
-import oasys.util.Constant;
+import oasys.util.ConstantString;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -29,7 +29,7 @@ public class Account extends JPanel {
     }
 
     private void setInformationPanel() {
-        informationPanel.setBackground(Constant.COLOR_BLUE);
+        informationPanel.setBackground(ConstantString.COLOR_BLUE);
         informationPanel.setLayout(new BorderLayout());
 
         model.addRow(new String[]{"Name","Abriol, Joshua GWAPO"});
@@ -40,7 +40,7 @@ public class Account extends JPanel {
         model.addRow(new String[]{"Program","Information and Communications Technology"});
         model.addRow(new String[]{"Year Level","Grade 11"});
         model.addRow(new String[]{"Student ID","1234567890"});
-        table.setBackground(Constant.COLOR_BLUE);
+        table.setBackground(ConstantString.COLOR_BLUE);
 
         DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
         renderer.setHorizontalAlignment(JLabel.CENTER);
@@ -53,7 +53,7 @@ public class Account extends JPanel {
         table.setDefaultEditor(Object.class,null); // DISABLE EDIT setEditable(false)
 
         bottomPanel.setLayout(new BorderLayout());
-        bottomPanel.setBackground(Constant.COLOR_BLUE);
+        bottomPanel.setBackground(ConstantString.COLOR_BLUE);
         bottomPanel.add(logOut,BorderLayout.EAST);
 
         informationPanel.add(table,BorderLayout.CENTER);
@@ -66,7 +66,7 @@ public class Account extends JPanel {
         icon = new ImageIcon(img);
         picture.setIcon(icon);
 
-        picturePanel.setBackground(Constant.COLOR_BLUE);
+        picturePanel.setBackground(ConstantString.COLOR_BLUE);
         picturePanel.setLayout(new GridBagLayout());
         picturePanel.add(picture);
     }

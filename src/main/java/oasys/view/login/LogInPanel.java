@@ -1,7 +1,7 @@
 package oasys.view.login;
 
 import lombok.Getter;
-import oasys.util.Constant;
+import oasys.util.ConstantString;
 
 import javax.swing.*;
 import java.awt.*;
@@ -28,7 +28,7 @@ public class LogInPanel extends JPanel {
     }
 
     public void setLogoPanel() {
-        logoPanel.setBackground(Constant.COLOR_BLUE);
+        logoPanel.setBackground(ConstantString.COLOR_BLUE);
         logoPanel.setLayout(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
 
@@ -40,7 +40,7 @@ public class LogInPanel extends JPanel {
     }
 
     public void setInputPanel() {
-        inputPanel.setBackground(Constant.COLOR_BLUE);
+        inputPanel.setBackground(ConstantString.COLOR_BLUE);
         inputPanel.setLayout(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
         constraints.insets = new Insets(2,2,2,2);

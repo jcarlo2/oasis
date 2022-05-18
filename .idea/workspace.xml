@@ -4,18 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5efaeda1-73c3-47a2-ac36-5799727770af" name="Changes" comment="LogInController done">
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/JPanelBlueBackground.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/mail.png" afterDir="false" />
+    <list default="true" id="5efaeda1-73c3-47a2-ac36-5799727770af" name="Changes" comment="add TeacherController; fix teacher and student table set up">
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJComboBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTextArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/logout_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/logout_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/mail_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/mail_red.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/controller/login/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/controller/login/LogInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/OASYSApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/OASYSApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/controller/database/ConcernReportDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/controller/database/ConcernReportDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasys/controller/user/student/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/controller/user/student/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/controller/user/teacher/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/controller/user/teacher/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/model/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/model/dto/ConcernReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/model/dto/ConcernReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/util/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/util/Constant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasys/util/TableCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/util/TableCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/util/TableCreatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/util/TableCreatorImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/Concern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/teacher/Concern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/mail.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +67,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\darkm_000\Desktop\Portfolio\java\oasis\src\main\resources\images" />
+      <recent name="C:\Users\darkm_000\Desktop\Portfolio\java\oasis\src\main\resources" />
       <recent name="C:\Users\darkm_000\Desktop\Portfolio\java\oasis\src\main\java\oasys\view\admin" />
       <recent name="C:\Users\darkm_000\Desktop\Portfolio\oasis\src\main\java\oasys\customcomponent" />
       <recent name="C:\Users\darkm_000\Desktop\Portfolio\oasis\src\main\resources\images" />
@@ -212,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652860436934</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add TeacherController; fix teacher and student table set up">
+      <created>1652870522224</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1652870522224</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,6 +249,7 @@
     <MESSAGE value="refactor teacher.Classroom" />
     <MESSAGE value="GUI COMPLETE" />
     <MESSAGE value="LogInController done" />
-    <option name="LAST_COMMIT_MESSAGE" value="LogInController done" />
+    <MESSAGE value="add TeacherController; fix teacher and student table set up" />
+    <option name="LAST_COMMIT_MESSAGE" value="add TeacherController; fix teacher and student table set up" />
   </component>
 </project>

@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import static oasys.util.Constant.*;
+import static oasys.util.ConstantString.*;
 
 public class UserDatabase {
     private boolean isIdExist(String id) {
@@ -20,11 +20,11 @@ public class UserDatabase {
             }catch (Exception e) {
                 e.printStackTrace();
             }
-        return isExist;
+        return !isExist;
     }
 
     public boolean isIdAndPasswordExist(String id, String password) {
-        if(!isIdExist(id)) return false;
+        if(isIdExist(id)) return false;
         boolean flag = false;
         try {
             String query = "SELECT EXISTS (SELECT id FROM user WHERE id = ? and password = ?)";
@@ -41,7 +41,7 @@ public class UserDatabase {
     }
 
     public String getRole(String id) {
-        if(!isIdExist(id)) return null;
+        if(isIdExist(id)) return null;
         String role = "";
             try {
                 String query = "SELECT role FROM user WHERE id =?";

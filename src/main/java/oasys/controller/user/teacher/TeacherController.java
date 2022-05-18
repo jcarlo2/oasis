@@ -1,7 +1,7 @@
 package oasys.controller.user.teacher;
 
 import oasys.controller.database.TeacherDatabase;
-import oasys.customcomponent.TeacherJTable;
+import oasys.customcomponent.jtable.TeacherJTable;
 import oasys.model.Teacher;
 import oasys.view.BuildGUI;
 import oasys.view.teacher.TeacherPanel;

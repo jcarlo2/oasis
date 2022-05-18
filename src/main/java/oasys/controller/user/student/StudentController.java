@@ -14,10 +14,13 @@ import oasys.view.student.panel.dashboard.DashboardCard;
 import oasys.view.student.panel.teacher.Concern;
 import oasys.view.student.panel.teacher.Teacher;
 import oasys.view.student.panel.teacher.TeacherCard;
+import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import java.util.Objects;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -103,6 +106,7 @@ public class StudentController {
     private void addStudentInformationToTable() {
         if(account.getTable().getRowCount() == 0) account.getTable().addStudentInformation(student);
         if(!isSameData(student)) {
+            System.out.println("@@");
             student = studentDatabase.getStudentInformation(student.getId());
             account.getTable().addStudentInformation(student);
         }
@@ -120,27 +124,43 @@ public class StudentController {
     }
 
     private void getConcernReportToMailBox() {
-        mailBox.getTable().addRowMailBox(concernReportDatabase.getConcernReport(student.getName()));
+        ArrayList<ConcernReport> reportList = concernReportDatabase.getConcernReport(student.getName());
+        if(reportList.size() == mailBox.getTable().getRowCount()) return;
+        mailBox.getTable().addRowMailBox(reportList);
     }
 
     private void addConcernReport() {
         concern.getSubmit().addActionListener(e -> {
-            if(concern.getTextArea().getText().equals("") || concern.getSubjectField().getText().equals("")) {
-                Dialog.EMPTY_FIELD();
-                return;
-            }
-            if(concernReportDatabase.isIdExist(concern.getReportId().getText())) {
-                Dialog.GENERATE_NEW_ID();
-                return;
-            }
-            ConcernReport report = new ConcernReport(concern.getStudentField().getText(),
-                    student.getId(),concern.getTeacherField().getText(),
-                    concern.getSubjectField().getText(),concern.getTextArea().getText(),
-                    concern.getReportId().getText(),"");
-            concernReportDatabase.addConcernReport(report);
+            System.out.println("SUBMIT");
+            if(isErrorInput()) return;
+            concernReportDatabase.addConcernReport(createConcernReport());
             concern.getReportId().setText(generateReportId());
             Dialog.SUBMIT_SUCCESSFUL();
         });
+    }
+
+    @Contract(" -> new")
+    private @NotNull ConcernReport createConcernReport() {
+        return new ConcernReport(concern.getStudentField().getText(),
+                                    student.getId(),
+                                      concern.getTeacherField().getText(),
+                                      concern.getSubjectField().getText(),
+                                       concern.getTextArea().getText(),
+                                     concern.getReportId().getText(),"",
+            Objects.requireNonNull(concern.getComboBox().getSelectedItem()).toString());
+    }
+
+    private boolean isErrorInput() {
+
+        if(concern.getTextArea().getText().equals("") || concern.getSubjectField().getText().equals("")) {
+            Dialog.EMPTY_FIELD();
+            return true;
+        }
+        if(concernReportDatabase.isIdExist(concern.getReportId().getText())) {
+            Dialog.GENERATE_NEW_ID();
+            return true;
+        }
+        return false;
     }
 
     private @NotNull String generateReportId() {
@@ -287,6 +307,8 @@ public class StudentController {
         studentPanel.getAccountBtn().addActionListener(e -> {
             if(e.getSource() == studentPanel.getAccountBtn()) {
                 studentPanel.getCard().show(studentPanel.getCenter(),"account");
+                studentPanel.getDashboard().getCard().show(studentPanel.getDashboard(),"dashboard");
+                studentPanel.getTeacher().getCard().show(studentPanel.getTeacher(),"teacher");
                 studentPanel.getAccountBtn().setEnabled(false);
                 studentPanel.getDashboardBtn().setEnabled(true);
                 studentPanel.getTeacherBtn().setEnabled(true);
@@ -296,6 +318,7 @@ public class StudentController {
         studentPanel.getDashboardBtn().addActionListener(e -> {
             if(e.getSource() == studentPanel.getDashboardBtn()) {
                 studentPanel.getCard().show(studentPanel.getCenter(),"dashboard");
+                studentPanel.getAccount().getCard().show(studentPanel.getAccount(),"account");
                 studentPanel.getAccountBtn().setEnabled(true);
                 studentPanel.getDashboardBtn().setEnabled(false);
                 studentPanel.getTeacherBtn().setEnabled(true);
@@ -305,6 +328,8 @@ public class StudentController {
         studentPanel.getTeacherBtn().addActionListener(e -> {
             if(e.getSource() == studentPanel.getTeacherBtn()) {
                 studentPanel.getCard().show(studentPanel.getCenter(),"teacher");
+                studentPanel.getDashboard().getCard().show(studentPanel.getDashboard(),"dashboard");
+                studentPanel.getAccount().getCard().show(studentPanel.getAccount(),"account");
                 studentPanel.getAccountBtn().setEnabled(true);
                 studentPanel.getDashboardBtn().setEnabled(true);
                 studentPanel.getTeacherBtn().setEnabled(false);

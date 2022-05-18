@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import static oasys.util.Constant.*;
+import static oasys.util.ConstantString.*;
 
 public class AnnouncementDatabase {
 

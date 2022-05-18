@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import static oasys.util.Constant.*;
+import static oasys.util.ConstantString.*;
 
 public class TeacherDatabase {
     public Teacher getTeacherInformation(String id) {
