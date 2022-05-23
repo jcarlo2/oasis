@@ -2,6 +2,7 @@ package oasys.view.student.panel.account;
 
 import lombok.Getter;
 import oasys.customcomponent.CustomJButton;
+import oasys.customcomponent.CustomJPanel;
 import oasys.customcomponent.JPanelBlueBackground;
 import oasys.customcomponent.jtable.StudentJTable;
 
@@ -11,7 +12,7 @@ import java.awt.*;
 import static oasys.util.ConstantString.*;
 
 @Getter
-public class Account extends JPanel {
+public class Account extends CustomJPanel {
     private final JPanelBlueBackground wrapper1 = new JPanelBlueBackground();
     private final JPanelBlueBackground wrapper2 = new JPanelBlueBackground();
     private final JPanelBlueBackground wrapper3 = new JPanelBlueBackground();
@@ -28,7 +29,6 @@ public class Account extends JPanel {
         setPicturePanel();
         setInformationPanel();
         setWrapper();
-
         add(wrapper1);
         add(informationPanel);
     }
@@ -43,13 +43,13 @@ public class Account extends JPanel {
     }
 
     private void setWrapper() {
-        wrapper1.setLayout(new BorderLayout());
-        wrapper1.add(picturePanel,BorderLayout.CENTER);
-        wrapper1.add(wrapper2,BorderLayout.NORTH);
-
+        wrapper3.add(mailBox);
         wrapper2.setLayout(new BorderLayout());
         wrapper2.add(wrapper3,BorderLayout.WEST);
-        wrapper3.add(mailBox);
+
+        wrapper1.setLayout(new BorderLayout());
+        wrapper1.add(wrapper2,BorderLayout.NORTH);
+        wrapper1.add(picturePanel,BorderLayout.CENTER);
     }
 
     private void setPicturePanel() {

@@ -15,4 +15,8 @@ public interface ConstantString {
    String MAIL_GREEN = "src/main/resources/images/mail_green.png";
    String LOGOUT_BLUE = "src/main/resources/images/logout_blue.png";
    String LOGOUT_RED = "src/main/resources/images/logout_red.png";
+   String POST_GREEN = "src/main/resources/images/new_post_green.png";
+   String POST_RED = "src/main/resources/images/new_post_red.png";
+   String DELETE_WHITE = "src/main/resources/images/delete_white.png";
+   String DELETE_BLUE = "src/main/resources/images/delete_blue.png";
 }

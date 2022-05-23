@@ -27,6 +27,7 @@ public class CustomJButton extends JButton {
         return new ImageIcon(icon.getImage().getScaledInstance(w,h,Image.SCALE_SMOOTH));
     }
 
+
     private void changeIconIfMouseHover() {
         this.addMouseListener(new MouseAdapter() {
             @Override

@@ -12,7 +12,6 @@ public class TeacherFrame extends  JFrame{
         add(teacherPanel);
         pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setResizable(false);
         setLocationRelativeTo(null);
     }
 }

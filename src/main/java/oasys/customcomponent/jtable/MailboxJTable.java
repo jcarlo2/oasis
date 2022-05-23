@@ -11,38 +11,33 @@ import java.awt.*;
 import java.util.ArrayList;
 
 @Getter
-public class CustomJTable extends JTable {
+public class MailboxJTable extends JTable {
     private final DefaultTableModel model;
 
-    public CustomJTable(String @NotNull [] columnName) {
+    public MailboxJTable(String @NotNull [] columnName) {
         model = new DefaultTableModel(0,columnName.length);
         setModel(model);
-        setColumnName(columnName);
-        setUpTable();
-    }
-
-    public CustomJTable(String @NotNull [] columnName,boolean isMailbox) {
-        model = new DefaultTableModel(0,columnName.length);
-        setModel(model);
-        setColumnName(columnName);
-        if(isMailbox) {
-            getColumnModel().getColumn(0).setMinWidth(30);
-            getColumnModel().getColumn(0).setMaxWidth(30);
-        }
+        setColumn(columnName);
         setGridColor(Color.BLACK);
         setUpTable();
     }
 
-    private void setColumnName( String @NotNull [] columnName) {
+    private void setColumn(String @NotNull [] columnName) {
         for(int i=0;i<columnName.length;i++) getColumnModel().getColumn(i).setHeaderValue(columnName[i]);
+        getColumnModel().getColumn(0).setMinWidth(30);
+        getColumnModel().getColumn(0).setMaxWidth(30);
     }
 
     public void addRowMailBox(@NotNull ArrayList<ConcernReport> reportList) {
         model.setRowCount(0);
         for(ConcernReport report : reportList) {
-            model.addRow(new String[] {String.valueOf(model.getRowCount() + 1),report.getStudentName(),
-                    report.getAdviser(),report.getSubject(),
-                    report.getReportId(),report.getStatus()});
+            model.addRow(new String[] {
+            String.valueOf(model.getRowCount() + 1),
+            report.getStatus(),
+            report.getSubject(),
+            report.getType(),
+            report.getReportId(),
+            report.getAdviser()});
         }
     }
 
@@ -52,7 +47,6 @@ public class CustomJTable extends JTable {
         setDefaultRenderer(Object.class,renderer); // CENTER TEXT
         setShowVerticalLines(false);
         setShowHorizontalLines(true);
-
         getTableHeader().setReorderingAllowed(false);
         getTableHeader().setResizingAllowed(false);
         setDefaultEditor(Object.class,null); // DISABLE EDIT setEditable(false)

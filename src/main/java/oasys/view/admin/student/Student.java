@@ -1,7 +1,6 @@
 package oasys.view.admin.student;
 
 import lombok.Getter;
-import oasys.customcomponent.jtable.CustomJTable;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,7 +8,7 @@ import java.awt.*;
 @Getter
 public class Student extends JPanel {
     String[] columnName = {"Name","Advisory Section","ID"};
-    private final CustomJTable table = new CustomJTable(columnName);
+    private final JTable table = new JTable();
     private final JScrollPane scroll = new JScrollPane(table);
     private final JPanel wrapper = new JPanel();
     private final JButton add = new JButton("Add");

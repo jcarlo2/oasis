@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import static oasys.util.ConstantString.*;
 
 public class TeacherDatabase {
+
     public Teacher getTeacherInformation(String id) {
         String[] data = new String[7];
         try {
@@ -29,7 +30,6 @@ public class TeacherDatabase {
                     data[5] = resultSet.getString("consultation_hours");
                     data[6] = resultSet.getString("year");
                 }
-
         }catch (Exception e) {
             e.printStackTrace();
         }
@@ -38,7 +38,23 @@ public class TeacherDatabase {
                     data[4],data[5],data[6],sections);
     }
 
-    private @NotNull ArrayList<String> getSections(String id, String year) {
+    public @NotNull String getAdviserId(String adviserName) {
+        try {
+            String query = "SELECT id FROM teacher WHERE name = ?";
+            Connection connection = DriverManager.getConnection(URL,USER,PASS);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1,adviserName);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                adviserName = resultSet.getString("id");
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return adviserName;
+    }
+
+    public @NotNull ArrayList<String> getSections(String id, String year) {
         ArrayList<String> sections = new ArrayList<>();
         try {
             String query = "SELECT section FROM teacher_class WHERE id = ? AND year = ?";

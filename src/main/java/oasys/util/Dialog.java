@@ -18,4 +18,12 @@ public interface Dialog {
     static void EMPTY_FIELD() {
         JOptionPane.showMessageDialog(new JFrame(), "check empty field");
     }
+
+    static void SELECT_DASHBOARD() {
+        JOptionPane.showMessageDialog(new JFrame(), "Select a dashboard to delete");
+    }
+
+    static void FULL_DASHBOARD() {
+        JOptionPane.showMessageDialog(new JFrame(), "There is no slot in dashboard!");
+    }
 }

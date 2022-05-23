@@ -1,16 +1,15 @@
-package oasys.view.student.panel.dashboard;
+package oasys.view.teacher.panel.dashboard;
 
 import lombok.Getter;
 import oasys.customcomponent.CustomJPanel;
 import oasys.customcomponent.CustomJTextPane;
-import oasys.customcomponent.JPanelBlueBackground;
 
 import javax.swing.*;
 import java.awt.*;
 
 @Getter
 public class AnnouncementBoard extends CustomJPanel {
-    private final JPanelBlueBackground wrapper = new JPanelBlueBackground();
+    private final JPanel wrapper = new JPanel();
     private final Icon nextIcon = new ImageIcon("src/main/resources/images/next.png");
     private final Icon prevIcon = new ImageIcon("src/main/resources/images/previous.png");
     private final JButton back = new JButton("Back");
@@ -33,3 +32,4 @@ public class AnnouncementBoard extends CustomJPanel {
         wrapper.add(next);
     }
 }
+

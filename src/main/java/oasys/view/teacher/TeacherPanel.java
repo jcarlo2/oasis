@@ -1,9 +1,10 @@
 package oasys.view.teacher;
 
 import lombok.Getter;
-import oasys.view.teacher.panel.Account;
-import oasys.view.teacher.panel.Dashboard;
-import oasys.view.teacher.panel.Classroom;
+import oasys.view.teacher.panel.account.Account;
+import oasys.view.teacher.panel.classroom.Classroom;
+import oasys.view.teacher.panel.classroom.ClassroomCard;
+import oasys.view.teacher.panel.dashboard.DashboardCard;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,8 +12,8 @@ import java.awt.*;
 @Getter
 public class TeacherPanel extends JPanel {
     private final Account account = new Account();
-    private final Dashboard dashboard = new Dashboard();
-    private final Classroom classroom = new Classroom();
+    private final DashboardCard dashboardCard = new DashboardCard();
+    private final ClassroomCard classroomCard = new ClassroomCard();
     private final JPanel center = new JPanel();
     private final JPanel west = new JPanel();
     private final JButton accountBtn = new JButton("        Account        ");
@@ -67,8 +68,8 @@ public class TeacherPanel extends JPanel {
     private void setCenter() {
         center.setLayout(card);
         center.add(account,"account");
-        center.add(dashboard,"dashboard");
-        center.add(classroom,"classroom");
+        center.add(dashboardCard,"dashboard");
+        center.add(classroomCard,"classroom");
         card.show(center,"account");
     }
 

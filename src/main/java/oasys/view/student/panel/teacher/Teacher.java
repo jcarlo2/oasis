@@ -2,29 +2,23 @@ package oasys.view.student.panel.teacher;
 
 import lombok.Getter;
 import oasys.customcomponent.CustomJTextField;
+import oasys.customcomponent.JPanelBlueBackground;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 import java.awt.*;
 
 @Getter
-public class Teacher extends JPanel {
-    private final JPanel wrapper1 = new JPanel();
-    private final JPanel wrapper2 = new JPanel();
+public class Teacher extends JPanelBlueBackground {
+    private final JPanelBlueBackground wrapper1 = new JPanelBlueBackground();
+    private final JPanelBlueBackground wrapper2 = new JPanelBlueBackground();
     private final JLabel label = new JLabel();
     private final CustomJTextField teacherName = new CustomJTextField("Teacher",false, Color.YELLOW);
     private final JButton concernBtn = new JButton("Raise A Concern");
     public Teacher() {
         setLayout(new GridLayout(2,1));
-
-        wrapper1.setOpaque(true);
-        wrapper2.setOpaque(true);
-        wrapper1.setBackground(Color.BLUE);
-        wrapper2.setBackground(Color.BLUE);
-
         setWrapper1();
         setWrapper2();
-
         add(wrapper1);
         add(wrapper2);
     }

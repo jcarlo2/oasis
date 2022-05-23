@@ -1,20 +1,20 @@
 package oasys.view.student.panel.account;
 
 import lombok.Getter;
-import oasys.customcomponent.jtable.CustomJTable;
+import oasys.customcomponent.CustomJPanel;
+import oasys.customcomponent.jtable.MailboxJTable;
 
 import javax.swing.*;
 import java.awt.*;
 
 @Getter
-public class MailBox extends JPanel {
-    private final String[] columnName = {"No.", "Student","Adviser","Subject","Report Id","Status"};
-    private final CustomJTable table = new CustomJTable(columnName,true);
+public class MailBox extends CustomJPanel {
+    private final String[] columnName = {"No.", "Status","Subject","Type","Report Id","Adviser"};
+    private final MailboxJTable table = new MailboxJTable(columnName);
     private final JScrollPane scroll = new JScrollPane(table);
     private final JButton back = new JButton("Back");
 
     public MailBox() {
-        setLayout(new BorderLayout());
         add(scroll,BorderLayout.CENTER);
         add(back,BorderLayout.SOUTH);
     }

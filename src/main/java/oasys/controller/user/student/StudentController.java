@@ -3,6 +3,8 @@ package oasys.controller.user.student;
 import oasys.controller.database.AnnouncementDatabase;
 import oasys.controller.database.ConcernReportDatabase;
 import oasys.controller.database.StudentDatabase;
+import oasys.controller.database.TeacherDatabase;
+import oasys.customcomponent.CustomJTextPane;
 import oasys.model.Student;
 import oasys.model.dto.ConcernReport;
 import oasys.util.Dialog;
@@ -29,6 +31,7 @@ public class StudentController {
     private final AnnouncementDatabase announcementDatabase = new AnnouncementDatabase();
     private final ConcernReportDatabase concernReportDatabase = new ConcernReportDatabase();
     private final StudentDatabase studentDatabase = new StudentDatabase();
+    private final TeacherDatabase teacherDatabase = new TeacherDatabase();
     private final DashboardCard dashboardCard;
     private final StudentPanel studentPanel;
     private final Account account;
@@ -50,8 +53,8 @@ public class StudentController {
         teacherCard = studentPanel.getTeacher();
         concern = studentPanel.getTeacher().getConcern();
         mailBox = studentPanel.getAccount().getMailBox();
-
         updateData();
+        announcementBoardBackListener();
         addMouseListenerToDashboard();
         addActionListenerToConcern();
         addActionListenerToTab();
@@ -64,28 +67,24 @@ public class StudentController {
     private void nextAnnouncement() {
         dashboardCard.getAnnouncementBoard().getNext().addActionListener(e -> {
             if(boardNum >= 5) {
-                setAnnouncementDetail(0);
-                setAnnouncementTitle(0);
+                setAnnouncementTitleAndDetail(0);
                 boardNum = 0;
                 return;
             }
             boardNum++;
-            setAnnouncementDetail(boardNum);
-            setAnnouncementTitle(boardNum);
+            setAnnouncementTitleAndDetail(boardNum);
         });
     }
 
     private void prevAnnouncement() {
         dashboardCard.getAnnouncementBoard().getPrevious().addActionListener(e -> {
             if(boardNum <= 0) {
-                setAnnouncementDetail(5);
-                setAnnouncementTitle(5);
+                setAnnouncementTitleAndDetail(5);
                 boardNum = 5;
                 return;
             }
             boardNum--;
-            setAnnouncementDetail(boardNum);
-            setAnnouncementTitle(boardNum);
+            setAnnouncementTitleAndDetail(boardNum);
         });
     }
 
@@ -93,7 +92,7 @@ public class StudentController {
         Runnable runnable = () -> {
             if(student.getId() != null) {
                 addStudentInformationToTable();
-                getTitle();
+                setDashboardTitle();
                 getAdviser();
                 concernAutoFillUp();
                 getConcernReportToMailBox();
@@ -106,7 +105,6 @@ public class StudentController {
     private void addStudentInformationToTable() {
         if(account.getTable().getRowCount() == 0) account.getTable().addStudentInformation(student);
         if(!isSameData(student)) {
-            System.out.println("@@");
             student = studentDatabase.getStudentInformation(student.getId());
             account.getTable().addStudentInformation(student);
         }
@@ -117,8 +115,7 @@ public class StudentController {
     }
 
     private void concernAutoFillUp() {
-        if(concern.getStudentField().getText().equals(student.getName()) &&
-                    concern.getTeacherField().getText().equals(student.getAdviser())) return;
+        if(concern.getStudentField().getText().equals(student.getName()) && concern.getTeacherField().getText().equals(student.getAdviser())) return;
         concern.getStudentField().setText(student.getName());
         concern.getTeacherField().setText(student.getAdviser());
     }
@@ -131,7 +128,6 @@ public class StudentController {
 
     private void addConcernReport() {
         concern.getSubmit().addActionListener(e -> {
-            System.out.println("SUBMIT");
             if(isErrorInput()) return;
             concernReportDatabase.addConcernReport(createConcernReport());
             concern.getReportId().setText(generateReportId());
@@ -151,7 +147,6 @@ public class StudentController {
     }
 
     private boolean isErrorInput() {
-
         if(concern.getTextArea().getText().equals("") || concern.getSubjectField().getText().equals("")) {
             Dialog.EMPTY_FIELD();
             return true;
@@ -180,8 +175,9 @@ public class StudentController {
         teacher.getTeacherName().setText(student.getAdviser());
     }
 
-    private void getTitle() {
-        String[] data = announcementDatabase.getTitle(student.getAdviser());
+    private void setDashboardTitle() {
+        String adviserId = teacherDatabase.getAdviserId(student.getAdviser());
+        String[] data = announcementDatabase.getTitle(adviserId);
         dashboardCard.getDashboard().getDashOne().setText(data[0]);
         dashboardCard.getDashboard().getDashTwo().setText(data[1]);
         dashboardCard.getDashboard().getDashThree().setText(data[2]);
@@ -190,107 +186,38 @@ public class StudentController {
         dashboardCard.getDashboard().getDashSix().setText(data[5]);
     }
 
-    private void setAnnouncementTitle(int num) {
-        String[] data = announcementDatabase.getTitle(student.getAdviser());
-        if(num == 0) dashboardCard.getAnnouncementBoard().getTitle().setText(data[0]);
-        if(num == 1) dashboardCard.getAnnouncementBoard().getTitle().setText(data[1]);
-        if(num == 2) dashboardCard.getAnnouncementBoard().getTitle().setText(data[2]);
-        if(num == 3) dashboardCard.getAnnouncementBoard().getTitle().setText(data[3]);
-        if(num == 4) dashboardCard.getAnnouncementBoard().getTitle().setText(data[4]);
-        if(num == 5) dashboardCard.getAnnouncementBoard().getTitle().setText(data[5]);
+
+    private void setAnnouncementTitleAndDetail(int num) {
+        String adviserId = teacherDatabase.getAdviserId(student.getAdviser());
+        String[] detail = announcementDatabase.getDetail(adviserId);
+        String[] title = announcementDatabase.getTitle(adviserId);
+        for(int i=0;i<detail.length;i++) {
+            if(num == i) dashboardCard.getAnnouncementBoard().getTextArea().setText(detail[i]);
+            if(num == i) dashboardCard.getAnnouncementBoard().getTitle().setText(title[i]);
+        }
     }
 
-    private void setAnnouncementDetail(int num) {
-        String[] data = announcementDatabase.getDetail(student.getAdviser());
-        if(num == 0) dashboardCard.getAnnouncementBoard().getTextArea().setText(data[0]);
-        if(num == 1) dashboardCard.getAnnouncementBoard().getTextArea().setText(data[1]);
-        if(num == 2) dashboardCard.getAnnouncementBoard().getTextArea().setText(data[2]);
-        if(num == 3) dashboardCard.getAnnouncementBoard().getTextArea().setText(data[3]);
-        if(num == 4) dashboardCard.getAnnouncementBoard().getTextArea().setText(data[4]);
-        if(num == 5) dashboardCard.getAnnouncementBoard().getTextArea().setText(data[5]);
+    private void addMouseListener(@NotNull CustomJTextPane dash, int num) {
+        dash.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                super.mousePressed(e);
+                if(e.getClickCount() == 2) {
+                    dashboardCard.getCard().show(e.getComponent().getParent().getParent(),"announcement");
+                    setAnnouncementTitleAndDetail(num);
+                    boardNum = num;
+                }
+            }
+        });
     }
     
     private void addMouseListenerToDashboard() {
+        final int DASHBOARD_QUANTITY = 6;
+        for(int i=0;i<DASHBOARD_QUANTITY;i++) addMouseListener(dashboardCard.getDashboard().getDashList().get(i),i);
+    }
+
+    private void announcementBoardBackListener() {
         dashboardCard.getAnnouncementBoard().getBack().addActionListener(e -> dashboardCard.getCard().show(dashboardCard,"dashboard"));
-
-        dashboardCard.getDashboard().getDashOne().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                super.mousePressed(e);
-                if(e.getClickCount() == 2) {
-                    dashboardCard.getCard().show(e.getComponent().getParent().getParent(),"announcement");
-                    setAnnouncementTitle(0);
-                    setAnnouncementDetail(0);
-                    boardNum = 0;
-                }
-            }
-        });
-
-        dashboardCard.getDashboard().getDashTwo().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                super.mousePressed(e);
-                if(e.getClickCount() == 2) {
-                    dashboardCard.getCard().show(e.getComponent().getParent().getParent(),"announcement");
-                    setAnnouncementTitle(1);
-                    setAnnouncementDetail(1);
-                    boardNum = 1;
-                }
-
-            }
-        });
-
-        dashboardCard.getDashboard().getDashThree().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                super.mousePressed(e);
-                if(e.getClickCount() == 2) {
-                    dashboardCard.getCard().show(e.getComponent().getParent().getParent(),"announcement");
-                    setAnnouncementTitle(2);
-                    setAnnouncementDetail(2);
-                    boardNum = 2;
-                }
-            }
-        });
-
-        dashboardCard.getDashboard().getDashFour().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                super.mousePressed(e);
-                if(e.getClickCount() == 2) {
-                    dashboardCard.getCard().show(e.getComponent().getParent().getParent(),"announcement");
-                    setAnnouncementTitle(3);
-                    setAnnouncementDetail(3);
-                    boardNum = 3;
-                }
-            }
-        });
-
-        dashboardCard.getDashboard().getDashFive().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                super.mousePressed(e);
-                if(e.getClickCount() == 2) {
-                    dashboardCard.getCard().show(e.getComponent().getParent().getParent(),"announcement");
-                    setAnnouncementTitle(4);
-                    setAnnouncementDetail(4);
-                    boardNum = 4;
-                }
-            }
-        });
-
-        dashboardCard.getDashboard().getDashSix().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                super.mousePressed(e);
-                if(e.getClickCount() == 2) {
-                    dashboardCard.getCard().show(e.getComponent().getParent().getParent(),"announcement");
-                    setAnnouncementTitle(5);
-                    setAnnouncementDetail(5);
-                    boardNum = 5;
-                }
-            }
-        });
     }
 
     private void addActionListenerToConcern() {

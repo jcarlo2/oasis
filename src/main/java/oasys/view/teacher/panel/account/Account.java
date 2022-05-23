@@ -1,6 +1,7 @@
-package oasys.view.teacher.panel;
+package oasys.view.teacher.panel.account;
 
 import lombok.Getter;
+import oasys.customcomponent.CustomJPanel;
 import oasys.customcomponent.jtable.TeacherJTable;
 import oasys.util.ConstantString;
 
@@ -8,7 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 
 @Getter
-public class Account extends JPanel {
+public class Account extends CustomJPanel {
     private final JPanel informationPanel = new JPanel();
     private final JPanel logoutPanel = new JPanel();
     private final JPanel picturePanel = new JPanel();
@@ -21,7 +22,6 @@ public class Account extends JPanel {
         setLayout(new GridLayout(2,1));
         setPicturePanel();
         setInformationPanel();
-
         add(picturePanel);
         add(informationPanel);
     }

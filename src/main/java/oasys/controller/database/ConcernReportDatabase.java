@@ -28,7 +28,7 @@ public class ConcernReportDatabase {
 
     public void addConcernReport(ConcernReport report) {
         try {
-            String query = "INSERT INTO concern_report(student_name,student_id,adviser,subject,detail,report_id) VALUES(?,?,?,?,?,?)";
+            String query = "INSERT INTO concern_report(student_name,student_id,adviser,subject,detail,type,report_id) VALUES(?,?,?,?,?,?,?)";
             Connection connection = DriverManager.getConnection(URL,USER,PASS);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1,report.getStudentName());
@@ -36,7 +36,8 @@ public class ConcernReportDatabase {
             preparedStatement.setString(3,report.getAdviser());
             preparedStatement.setString(4,report.getSubject());
             preparedStatement.setString(5,report.getDetail());
-            preparedStatement.setString(6,report.getReportId());
+            preparedStatement.setString(6,report.getType());
+            preparedStatement.setString(7,report.getReportId());
             preparedStatement.executeUpdate();
         }catch (Exception e) {
             e.printStackTrace();
