@@ -22,6 +22,7 @@ public class Section extends CustomJPanel {
     public Section() {
         setWrapper();
         list.setBackground(COLOR_BLUE);
+        back.setBackground(Color.RED);
         add(student,BorderLayout.NORTH);
         add(scroll,BorderLayout.CENTER);
         add(wrapper,BorderLayout.SOUTH);

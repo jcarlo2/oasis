@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5efaeda1-73c3-47a2-ac36-5799727770af" name="Changes" comment="add some style; fix teacher.Classroom">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTextPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/customcomponent/CustomJTextPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/classroom/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/classroom/Classroom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/MailBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/student/panel/account/MailBox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/classroom/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/classroom/Section.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/dashboard/AnnouncementBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasys/view/teacher/panel/dashboard/AnnouncementBoard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653304200002</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add some style; fix teacher.Classroom">
+      <created>1653304907940</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1653304907940</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
