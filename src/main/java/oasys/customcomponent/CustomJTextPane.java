@@ -13,12 +13,21 @@ public class CustomJTextPane extends JTextPane {
 
     public CustomJTextPane(boolean isCenterText, boolean isEditable) {
         setEditable(isEditable);
+        setFont(new Font("Monaco",Font.PLAIN,15));
         setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
+        if(isCenterText) centerText();
+    }
+
+    public CustomJTextPane(boolean isCenterText, boolean isEditable, boolean isRaised) {
+        setEditable(isEditable);
+        setFont(new Font("Monaco",Font.PLAIN,15));
+        if(isRaised) setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
         if(isCenterText) centerText();
     }
 
     public CustomJTextPane(boolean isCenterText, boolean isEditable, String str) {
         setEditable(isEditable);
+        setFont(new Font("Monaco",Font.PLAIN,15));
         setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
         if(isCenterText) centerText();
         setBackground(COLOR_BLUE);

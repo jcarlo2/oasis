@@ -9,6 +9,8 @@ import oasys.customcomponent.JPanelBlueBackground;
 import javax.swing.*;
 import java.awt.*;
 
+import static oasys.util.ConstantString.COLOR_BLUE;
+
 @Getter
 public class Section extends CustomJPanel {
     private final CustomJTextPane student = new CustomJTextPane(true,false, "Student List");
@@ -19,6 +21,7 @@ public class Section extends CustomJPanel {
 
     public Section() {
         setWrapper();
+        list.setBackground(COLOR_BLUE);
         add(student,BorderLayout.NORTH);
         add(scroll,BorderLayout.CENTER);
         add(wrapper,BorderLayout.SOUTH);
